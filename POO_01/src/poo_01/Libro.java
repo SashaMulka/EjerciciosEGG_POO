@@ -7,6 +7,9 @@ el autor del libro y el numero de páginas.
  */
 package poo_01;
 
+import java.util.Locale;
+import java.util.Scanner;
+
 
 public class Libro {
     
@@ -57,5 +60,24 @@ public class Libro {
         this.paginas = paginas;
     }
     
+    public void registrarLibro() {
+        Scanner entry = new Scanner(System.in, "ISO-8859-1").useDelimiter("\n").useLocale(Locale.US);
+        System.out.println("---Registrar libro---");
+        System.out.println("Nombre:");
+        this.titulo = entry.next();
+        System.out.println("Autor:");
+        this.autor = entry.next();
+        System.out.println("Numero de paginas:");
+        this.paginas = entry.nextInt();
+        System.out.println("ISBN:");
+        this.isbn = entry.nextInt();        
+    }
     
+    public void datosLibro() {
+        System.out.println("---Datos del libro---");
+        System.out.println("Titulo: " + this.titulo);
+        System.out.println("Autor: " + this.autor);
+        System.out.println("Paginas: " + this.paginas);
+        System.out.println("ISBN: " + this.isbn);
+    }
 }

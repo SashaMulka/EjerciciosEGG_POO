@@ -3,6 +3,9 @@
  */
 package poo_02;
 
+import java.util.Locale;
+import java.util.Scanner;
+
 public class Circunferencia {
     
             private double radio;
@@ -19,7 +22,9 @@ public class Circunferencia {
             }
             
             public void crearCircunferencia () {
-                //???
+                Scanner entry = new Scanner(System.in, "ISO-8859-1").useDelimiter("\n").useLocale(Locale.US);
+                System.out.println("Ingrese el radio del la circunferencia");
+                this.radio = entry.nextInt();
             }
             
             public double area() {

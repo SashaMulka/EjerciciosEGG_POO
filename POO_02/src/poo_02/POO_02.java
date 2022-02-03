@@ -13,7 +13,9 @@ public class POO_02 {
   
     public static void main(String[] args) {
         
-Circunferencia circunferencia = new Circunferencia(15);
+        Circunferencia circunferencia = new Circunferencia(10);
+
+        circunferencia.crearCircunferencia();
 
         System.out.println(circunferencia.area());
         

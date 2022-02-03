@@ -67,6 +67,7 @@ public class Cuenta {
         this.dni=entry.nextLong();
         System.out.println("Declare el saldo");
         this.saldo=entry.nextDouble();
+        System.out.println("");
     }
     
     public void ingresar(double ingreso){
